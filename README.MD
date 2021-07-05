@@ -1,5 +1,2 @@
-# Vite Template
-npm run dev
-
-Port 88 - Dev Server
-Port 89 - Preview Server
+# Classic iOS Icons builed with SVG and CSS
+Live version: [iOS Icons](https://ios-icons.gololobov.dev)

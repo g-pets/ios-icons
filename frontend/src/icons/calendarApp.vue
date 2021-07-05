@@ -1,8 +1,9 @@
 <template lang="pug">
-.icon-header
-	.icon-title {{date.weekday}}
 .icon-body
-	.date {{date.date}}
+	.content-header
+		.title {{date.weekday}}
+	.content-body
+		.date {{date.date}}
 </template>
 
 <script>
@@ -21,12 +22,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.icon-header
+.content-header
 	background-image: linear-gradient(180deg, #EC9C9E 12%, #D13335 90%, #7f1517 100%)
-.icon-body
-	height: 70em
+.content-body
 	background: #fff
-	box-shadow: inset 0px 30px 50px rgba(#000,.3)
+	box-shadow: inset 0px 3em 5em rgba(#000,.3)
 	.date
 		color: #333
 		text-align: center

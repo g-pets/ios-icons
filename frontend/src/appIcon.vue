@@ -54,7 +54,7 @@ export default {
 <style lang="stylus" scoped>
 .app-icon
 	width: 100%
-	foreignObject
+	:deep(foreignObject)
 		width: 100rem
 		height: 100rem
 		.icon-body
@@ -62,6 +62,17 @@ export default {
 			height: 100%
 			border-radius: 10em
 			overflow: hidden
+			.content-header
+				height: 300px
+				.title
+					color: #fff
+					text-align: center
+					font-size: 10em
+					line-height: 1
+					padding: 0.6em 0 0.3em
+					font-family: Helvetica
+					font-weight: bold
+					text-shadow: 0px -0.05em 0 rgba(#000,.5)
 		.glossy
 			position: relative
 			&:before
