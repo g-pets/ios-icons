@@ -16,5 +16,5 @@ services:
             - ./frontend:/home/app
             - /home/app/node_modules
         working_dir: /home/app
-        command: tail -F anything
-        # command: npm run dev
+        # command: tail -F anything
+        command: npm run dev
