@@ -23,14 +23,14 @@ export default {
 
 <style lang="stylus" scoped>
 .content-header
-	background-image: linear-gradient(180deg, #EC9C9E 12%, #D13335 90%, #7f1517 100%)
+	background-image: linear-gradient(180deg, #EC9C9E 12%, #D13335 90%, #8c1719 100%)
 .content-body
 	background: #fff
-	box-shadow: inset 0px 3em 5em rgba(#000,.3)
+	box-shadow: inset 0px 3em 4em rgba(#000,.25)
 	.date
 		color: #333
 		text-align: center
-		font-size: 40em
-		line-height: 1.2
+		font-size: 41em
+		line-height: 1.15
 		font-weight: bold
 </style>

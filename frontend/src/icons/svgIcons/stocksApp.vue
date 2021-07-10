@@ -26,7 +26,7 @@
 .icon-body
 	background: linear-gradient(180deg, #1F67D5 60%, #58E3FC 100%)
 	svg.chart
-		margin-top: 6em
+		margin-top: 6.4em
 		.axis
 			fill: rgba(#fff,0.4)
 			filter: drop-shadow(0px .1em .6em rgba(#000, 0.5))
@@ -39,11 +39,13 @@
 		display: flex
 		justify-content: space-between
 		line-height: 1
-		margin-top: 1.1em
+		margin-top: 0.5em
 		.month
 			display: inline-block
-			font-size: 6.2em
+			font-size: 6.3em
 			font-weight: bold
 			color: #fff
 			text-shadow: 0px 0.05em 0.1em rgba(#000,.4)
+			&:first-child
+				margin-right: 0.4em
 </style>

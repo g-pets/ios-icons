@@ -1,5 +1,5 @@
 <template lang="pug">
-.icon-body
+.icon-body(xmlns="http://www.w3.org/1999/xhtml")
 	.buttons-container
 		.button
 			glyph(name="plus_calc")
@@ -32,7 +32,7 @@
 		&:before
 			content: ''
 			position: absolute
-			top: 1em
+			top: 1.3em
 			left: 0
 			right: 0
 			margin: auto
@@ -40,7 +40,7 @@
 			height: 45%
 			border-radius: 100% 100% 90% 90%/100% 100% 100% 100%
 			background: linear-gradient(180deg, rgba(#fff, .5) 0%, rgba(#fff, .1) 100%)
-			box-shadow: inset 0 0.3em 0.4em rgba(#fff,0.5)
+			box-shadow: inset 0 0.7em 0.7em rgba(#fff,0.5)
 		svg.icon
 			width: 100%
 			height: 100%

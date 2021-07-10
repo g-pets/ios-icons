@@ -1,28 +1,28 @@
 <template lang="pug">
 svg.app-icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000")
-	foreignObject
-		component(:is="component")
+	foreignObject(x="0" y="0")
+		component(:is="icon")
 </template>
 
 <script>
-import phoneApp from './icons/phoneApp.vue'
-import textApp from './icons/textApp.vue'
-import iPodApp from './icons/iPodApp.vue'
-import calculatorApp from './icons/calculatorApp.vue'
-import weatherApp from './icons/weatherApp.vue'
-import settingsApp from './icons/settingsApp.vue'
-import stocksApp from './icons/stocksApp.vue'
-import mapsApp from './icons/mapsApp.vue'
+import phoneApp from './phoneApp.vue'
+import textApp from './textApp.vue'
+import iPodApp from './iPodApp.vue'
+import calculatorApp from './calculatorApp.vue'
+import weatherApp from './weatherApp.vue'
+import settingsApp from './settingsApp.vue'
+import stocksApp from './stocksApp.vue'
+import mapsApp from './mapsApp.vue'
 
 // Not Optimized
-import clockApp from './icons/clockApp.vue'
-import notesApp from './icons/notesApp.vue'
-import calendarApp from './icons/calendarApp.vue'
-import mailApp from './icons/mailApp.vue'
-import safariApp from './icons/safariApp.vue'
-import photosApp from './icons/photosApp.vue'
-import cameraApp from './icons/cameraApp.vue'
-import youTubeApp from './icons/youTubeApp.vue'
+import clockApp from './clockApp.vue'
+import notesApp from './notesApp.vue'
+import calendarApp from './calendarApp.vue'
+import mailApp from './mailApp.vue'
+import safariApp from './safariApp.vue'
+import photosApp from './photosApp.vue'
+import cameraApp from './cameraApp.vue'
+import youTubeApp from './youTubeApp.vue'
 
 export default {
 	name: "appIcon",
@@ -46,7 +46,7 @@ export default {
 	},
 	props: {
 		name: String,
-		component: String
+		icon: String
 	}
 }
 </script>
@@ -60,19 +60,19 @@ export default {
 		.icon-body
 			width: 100%
 			height: 100%
-			border-radius: 10em
-			overflow: hidden
+			// border-radius: 10em
+			// overflow: hidden
 			.content-header
 				height: 300px
 				.title
 					color: #fff
 					text-align: center
-					font-size: 10em
+					font-size: 9.5em
 					line-height: 1
 					padding: 0.6em 0 0.3em
 					font-family: Helvetica
 					font-weight: bold
-					text-shadow: 0px -0.05em 0 rgba(#000,.5)
+					text-shadow: 0px -0.05em 0 rgba(#000,.4)
 		.glossy
 			position: relative
 			&:before

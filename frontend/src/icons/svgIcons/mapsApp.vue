@@ -28,7 +28,7 @@
 		g
 			g(filter="url(#badgeFilter)")
 				path(fill="url(#badgeGradient)" d="M572 122c34 0 64-12 83-31 2-2 6-2 8 0 19 19 49 31 85 31 35 0 65-12 85-32 2-2 5-2 7 0 36 38 56 87 56 141 0 184-211 215-237 215-25 0-237-32-237-215 0-54 20-104 56-141 2-2 6-2 8 0 19 20 49 32 86 32z")
-			text.label(x="530" y="360") 280
+			text.label(x="520" y="360") 280
 		defs
 			//- Paths
 			symbol(id="streets")
@@ -138,6 +138,7 @@
 		opacity: .35
 	.label
 		fill: #fff
-		font: 10em sans-serif
+		font: 10em Arial, Helvetica
 		font-weight: bold
+		letter-spacing: 0.05em
 </style>

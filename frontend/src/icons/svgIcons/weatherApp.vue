@@ -15,13 +15,14 @@
 	padding: 2.5em
 	.temp
 		line-height: 1
-		font-size: 12em
+		font-size: 12.5em
 		margin-top: 0.55em
 		color: #fff
 		text-align: center
 		text-indent: 0.3em
 		font-weight: bold
 		text-shadow: 0px 0.07em 0 rgba(#000,.3)
+
 	.sun
 		position: relative
 		width: 29em

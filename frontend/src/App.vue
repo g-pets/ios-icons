@@ -1,23 +1,35 @@
 <template lang="pug">
 glyphs-set
-.icons-container
-	app-icon(v-for="icon in icons" :name="icon.name" :component="icon.component")
+navigation-bar
+	button(@click="showOriginal()") Original
+	segmented-control(:segments="segments" v-model="segment")
+main
+	icons-grid(:iconBase="segment.value" :icons="icons")
 footer
 	small Designed by 
 		a(href="https://apple.com" rel="noopener" target="_blank") Apple 
-		| in California. Assembled in Prague by 
+		| in California.<br>
+		| Assembled in Prague by 
 		a(href="https://gololobov.dev" rel="noopener" target="_blank") Constantine Gololobov
 </template>
 
 <script>
-import glyphsSet from "~/glyphs/glyphsSet.vue"
-import appIcon from '~/appIcon.vue'
 import "./assets/styles/index.styl"
+import glyphsSet from "~/glyphs/glyphsSet.vue"
+import navigationBar from "~/components/navigationBar.vue"
+import segmentedControl from "~/components/segmentedControl.vue"
+import iconsGrid from "~/components/iconsGrid.vue"
 export default {
 	name: "iosIcons",
-	components: { glyphsSet, appIcon },
+	components: { glyphsSet, navigationBar, segmentedControl, iconsGrid },
 	data() {
 		return {
+			segment: {value: "svgIcon", title: "SVG Version"},
+			segments: [
+				{value: "svgIcon", title: "SVG Version"},
+				{value: "canvasIcon", title: "Canvas Version"},
+				{value: "originalIcon", title: "Original Version"}
+			],
 			icons: [
 				{name: "Text", component: "textApp"},
 				{name: "Calendar", component: "calendarApp"},
@@ -37,11 +49,19 @@ export default {
 				{name: "iPod", component: "iPodApp"},
 			]
 		}
+	},
+	methods: {
+		showOriginal() {
+			if(this.segment.value !== "originalIcon") this.segment.value = "originalIcon"
+			else this.segment.value = "svgIcon"
+		}
 	}
 }
 </script>
 
 <style lang="stylus" scoped>
+.panel
+	background: #444
 .icons-container
 	display: grid
 	padding: 5vw
@@ -60,5 +80,4 @@ footer
 		color: inherit
 	&:hover
 		color: #fff
-
 </style>

@@ -10,8 +10,8 @@
 	display: flex
 	svg.icon
 		margin: auto
-		width: 37em
-		height: 37em
+		width: 36em
+		height: 36em
 		fill: #fff
 		filter: drop-shadow(0px 0.8em 0.5em rgba(#000, 0.3))
 </style>
