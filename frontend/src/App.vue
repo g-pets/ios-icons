@@ -1,10 +1,7 @@
 <template lang="pug">
 glyphs-set
-navigation-bar
-	button(@click="showOriginal()") Original
-	segmented-control(:segments="segments" v-model="segment")
 main
-	icons-grid(:iconBase="segment.value" :icons="icons")
+	icons-grid(iconBase="svgIcon" :icons="icons")
 footer
 	small Designed by 
 		a(href="https://apple.com" rel="noopener" target="_blank") Apple 
@@ -16,20 +13,12 @@ footer
 <script>
 import "./assets/styles/index.styl"
 import glyphsSet from "~/glyphs/glyphsSet.vue"
-import navigationBar from "~/components/navigationBar.vue"
-import segmentedControl from "~/components/segmentedControl.vue"
 import iconsGrid from "~/components/iconsGrid.vue"
 export default {
 	name: "iosIcons",
-	components: { glyphsSet, navigationBar, segmentedControl, iconsGrid },
+	components: { glyphsSet, iconsGrid },
 	data() {
 		return {
-			segment: {value: "svgIcon", title: "SVG Version"},
-			segments: [
-				{value: "svgIcon", title: "SVG Version"},
-				{value: "canvasIcon", title: "Canvas Version"},
-				{value: "originalIcon", title: "Original Version"}
-			],
 			icons: [
 				{name: "Text", component: "textApp"},
 				{name: "Calendar", component: "calendarApp"},
@@ -49,19 +38,11 @@ export default {
 				{name: "iPod", component: "iPodApp"},
 			]
 		}
-	},
-	methods: {
-		showOriginal() {
-			if(this.segment.value !== "originalIcon") this.segment.value = "originalIcon"
-			else this.segment.value = "svgIcon"
-		}
 	}
 }
 </script>
 
 <style lang="stylus" scoped>
-.panel
-	background: #444
 .icons-container
 	display: grid
 	padding: 5vw
@@ -73,7 +54,6 @@ footer
 	font-size: 0.85em
 	text-align: center
 	padding: 1em
-footer
 	color: #888
 	transition: color .3s
 	a

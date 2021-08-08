@@ -60,8 +60,6 @@ export default {
 		.icon-body
 			width: 100%
 			height: 100%
-			// border-radius: 10em
-			// overflow: hidden
 			.content-header
 				height: 300px
 				.title

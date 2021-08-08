@@ -6,7 +6,7 @@ glyphs-set
 
 <script>
 import glyphsSet from "~/glyphs/glyphsSet.vue"
-import svgBase from '~/svgVersion/_svgBase.vue'
+import svgBase from "~/svgVersion/_svgBase.vue"
 export default {
 	name: "iosIcons",
 	components: { glyphsSet, svgBase },

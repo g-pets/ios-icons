@@ -6,15 +6,14 @@ services:
         build:
             context: ./frontend
             dockerfile: Dockerfile
-        image: ios-icons:1.0
+        image: ios-icons:0.1
         ports:
-            - 80:5000 # Dev
-            - 81:5001 # Preview
+            - 81:5000 # Dev
+            - 82:5001 # Preview
         environment:
             HOST: 0.0.0.0
         volumes:
             - ./frontend:/home/app
             - /home/app/node_modules
         working_dir: /home/app
-        command: tail -F anything
-        # command: npm run dev
+        command: npm run dev

@@ -1,6 +1,5 @@
 <template lang="pug">
 .icons-grid
-	//- canvas-base(v-for="icon in icons" :name="icon.name" :component="icon.component")
 	template(v-for="icon in icons")
 		.app-item
 			component.app-icon(:is="iconBase" :icon="icon.component")
@@ -8,12 +7,10 @@
 </template>
 
 <script>
-import svgIcon from '~/icons/svgIcons/_base.vue'
-import canvasIcon from '~/icons/canvasIcons/_base.vue'
-import originalIcon from '~/icons/originalIcons/_base.vue'
+import svgIcon from "~/icons/svgIcons/_base.vue"
 export default {
 	name: "iconsGrid",
-	components: { svgIcon, canvasIcon, originalIcon  },
+	components: { svgIcon },
 	props: {
 		iconBase: String,
 		icons: Array
@@ -31,8 +28,6 @@ export default {
 	.app-icon
 		border-radius: 1.5em
 		overflow: hidden
-		// width: 100%
-		// height: 100%
 	.app-name
 		text-align: center
 </style>
